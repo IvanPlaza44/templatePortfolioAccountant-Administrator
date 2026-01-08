@@ -1,0 +1,64 @@
+---
+import { Building2, Award, TrendingUp } from '@lucide/astro';
+
+const { title, description, items } = Astro.props;
+
+const iconMap = {
+  Building2: Building2,
+  Award: Award,
+  TrendingUp: TrendingUp,
+};
+---
+
+<section class="bg-slate-50 py-24">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center mb-16">
+      <h2 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl"> 
+        {title} 
+      </h2>
+      <p class="mt-4 text-pretty text-lg text-slate-600"> 
+        {description} 
+      </p>
+    </div>
+
+    <div class="mx-auto max-w-4xl">
+      <div class="space-y-8 relative">
+        {items.map(({ role, company, period, achievements, icon, current }) => {
+          const IconComponent = iconMap[icon];
+
+          return (
+   
+            <div class="relative pl-8 border-l-2 border-slate-300 hover:border-[#1e3a8a] transition-colors group">
+              
+           
+              <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-white border-2 border-slate-300 group-hover:border-[#1e3a8a] transition-colors"></div>
+              
+              <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="flex flex-col sm:flex-row items-start gap-4">
+         
+                  <div class={`p-2 rounded-lg flex-shrink-0 ${current ? 'bg-blue-50 text-[#1e3a8a]' : 'bg-slate-50 text-slate-400'}`}>
+                    {IconComponent && <IconComponent class="h-8 w-8" />}
+                  </div>
+                  
+                  <div class="flex-1">
+                    <h3 class="text-xl font-semibold text-slate-900">{role}</h3>
+                    <p class="text-sm font-medium text-slate-600 mb-3">{company} | {period}</p>
+                    
+                    <ul class="space-y-2">
+                      {achievements.map((item) => (
+                        <li class="flex items-start gap-2 text-sm text-slate-600 leading-relaxed">
+                          <span class="text-[#1e3a8a] font-bold">•</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</section>

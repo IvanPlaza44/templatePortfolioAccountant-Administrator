@@ -1,0 +1,153 @@
+{
+  "seo": {
+    "title": "Alexandra Morgan - Experta en Auditoría Financiera y Consultoría Fiscal",
+    "description": "Servicios profesionales de auditoría financiera y consultoría fiscal por Alexandra Morgan, con más de una década de experiencia en finanzas corporativas."
+  },
+  "nav": {
+    "services": "Servicios",
+    "experience": "Experiencia",
+    "testimonials": "Testimonios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "name": "Alexandra Morgan",
+    "title": "Claridad Financiera para el Crecimiento de su Negocio",
+    "subtitle": "Liderazgo financiero estratégico con más de una década de experiencia en auditoría, planificación fiscal y administración de empresas para corporaciones a nivel mundial.",
+    "primaryCTA": "Agendar Consulta",
+    "secondaryCTA": "Descargar Perfil Profesional"
+  },
+  "statsGrid": {
+    "stats": [
+      { "value": "12+", "label": "Años de Experiencia" },
+      { "value": "200+", "label": "Auditorías Fiscales Completadas" },
+      { "value": "$50M+", "label": "Presupuesto Gestionado" },
+      { "value": "98%", "label": "Tasa de Retención de Clientes" }
+    ]
+  },
+  "services": {
+    "title": "Servicios Financieros Integrales",
+    "description": "Soluciones personalizadas para optimizar las operaciones financieras de su empresa",
+    "items": [
+      {
+        "title": "Auditoría Financiera",
+        "description": "Auditorías exhaustivas que garantizan el cumplimiento, la precisión y la transparencia en la presentación de informes financieros.",
+        "icon": "FileCheck"
+      },
+      {
+        "title": "Planificación Fiscal",
+        "description": "Optimización fiscal estratégica para minimizar pasivos y maximizar la eficiencia financiera.",
+        "icon": "Calculator"
+      },
+      {
+        "title": "Gestión de Nómina",
+        "description": "Procesamiento de nómina preciso y puntual con pleno cumplimiento de las normativas vigentes.",
+        "icon": "Users"
+      },
+      {
+        "title": "Consultoría de Negocios",
+        "description": "Orientación estratégica para el crecimiento financiero, la gestión de riesgos y la excelencia operativa.",
+        "icon": "TrendingUp"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experiencia Profesional",
+    "description": "Una trayectoria de excelencia en finanzas corporativas",
+    "items": [
+      {
+        "role": "Auditor Financiero Senior",
+        "company": "Deloitte International",
+        "period": "2019 - Presente",
+        "achievements": [
+          "Lideró más de 50 auditorías financieras de alto impacto para empresas Fortune 500",
+          "Alcanzó una tasa de cumplimiento del 100% en todos los marcos regulatorios",
+          "Redujo el tiempo de entrega de auditorías en un 30% mediante la optimización de procesos"
+        ],
+        "current": true,
+        "icon": "Building2"
+      },
+      {
+        "role": "Contador Junior",
+        "company": "KPMG Financial Services",
+        "period": "2015 - 2019",
+        "achievements": [
+          "Apoyó a los equipos de auditoría en más de 100 proyectos",
+          "Especializado en la preparación y análisis de estados financieros",
+          "Obtuvo la certificación CPA en el primer año"
+        ],
+        "current": false,
+        "icon": "Award"
+      },
+      {
+        "role": "Consultor de Impuestos",
+        "company": "PwC Advisory",
+        "period": "2015 - 2019",
+        "achievements": [
+          "Gestionó la planificación fiscal de carteras que superan los $200M en activos",
+          "Ahorró a los clientes un promedio del 18% en pasivos fiscales anuales",
+          "Desarrolló estrategias fiscales para transacciones transfronterizas"
+        ],
+        "current": false,
+        "icon": "TrendingUp"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Confianza de Líderes del Sector",
+    "description": "Lo que dicen los clientes sobre nuestro trabajo conjunto",
+    "items": [
+      {
+        "name": "Michael Chen",
+        "role": "CFO, TechCorp Industries",
+        "content": "Experiencia excepcional en el manejo de escenarios fiscales complejos. Ahorró recursos significativos a nuestra empresa.",
+        "stars": 5
+      },
+      {
+        "name": "Sarah Williams",
+        "role": "CEO, Global Ventures Ltd",
+        "content": "La auditoría financiera más minuciosa que hemos tenido. Proporcionó perspectivas accionables que transformaron nuestras operaciones financieras.",
+        "stars": 5
+      },
+      {
+        "name": "David Martinez",
+        "role": "Director, Finance Holdings Inc",
+        "content": "Profesional, confiable e increíblemente conocedor. Un socio de confianza en nuestra estrategia de crecimiento empresarial.",
+        "stars": 5
+      }
+    ]
+  },
+  "contact": {
+    "title": "Hablemos de sus Necesidades Financieras",
+    "description": "Programe una consulta para explorar cómo podemos optimizar las finanzas de su negocio",
+    "labels": {
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo Electrónico",
+      "phone": "Número de Teléfono",
+      "company": "Nombre de la Empresa",
+      "service": "Servicio de Interés",
+      "selection": [
+        "Auditoría Financiera",
+        "Planificación Fiscal",
+        "Gestión de Nómina",
+        "Consultoría de Negocios",
+        "Otros Servicios"
+      ],
+      "message": "Mensaje",
+      "button": "Agendar Consulta"
+    },
+    "placeholder": {
+      "firstName": "Juan",
+      "lastName": "Pérez",
+      "email": "tu-correo@ejemplo.com",
+      "phone": "+1 (234) 567 8900",
+      "company": "Nombre de su Empresa Inc.",
+      "service": "Seleccione un servicio",
+      "message": "Cuéntenos sobre sus necesidades y objetivos financieros..."
+    }
+  },
+  "footer": {
+    "text": "2026 Contador Senior y Administrador de Empresas. Todos los derechos reservados.",
+    "certification": "Certificación CPA | Miembro de AICPA"
+  }
+}

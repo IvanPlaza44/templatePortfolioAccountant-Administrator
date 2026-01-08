@@ -1,0 +1,153 @@
+{
+  "seo": {
+    "title": "Alexandra Morgan - Expert Financial Auditor & Tax Consultant",
+    "description": "Professional financial auditing and tax consulting services by Alexandra Morgan, with over a decade of experience in corporate finance."
+  },
+  "nav": {
+    "services": "Services",
+    "experience": "Experience",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Alexandra Morgan",
+    "title": "Financial Clarity for Your Business Growth",
+    "subtitle": "Strategic financial leadership with over a decade of expertise in auditing, tax planning, and business administration for corporations worldwide.",
+    "primaryCTA": "Schedule Consultation",
+    "secondaryCTA": "Download Professional Profile"
+  },
+  "statsGrid": {
+    "stats": [
+      { "value": "12+", "label": "Years of Experience" },
+      { "value": "200+", "label": "Tax Audits Completed" },
+      { "value": "$50M+", "label": "Managed Budget" },
+      { "value": "98%", "label": "Client Retention Rate" }
+    ]
+  },
+  "services": {
+    "title": "Comprehensive Financial Services",
+    "description": "Tailored solutions to optimize your business financial operations",
+    "items": [
+      {
+        "title": "Financial Auditing",
+        "description": "Comprehensive audits ensuring compliance, accuracy, and transparency in financial reporting.",
+        "icon": "FileCheck"
+      },
+      {
+        "title": "Tax Planning",
+        "description": "Strategic tax optimization to minimize liabilities and maximize financial efficiency.",
+        "icon": "Calculator"
+      },
+      {
+        "title": "Payroll Management",
+        "description": "Accurate and timely payroll processing with full regulatory compliance.",
+        "icon": "Users"
+      },
+      {
+        "title": "Business Consulting",
+        "description": "Strategic guidance for financial growth, risk management, and operational excellence.",
+        "icon": "TrendingUp"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "description": "A track record of excellence in corporate finance",
+    "items": [
+      {
+        "role": "Senior Financial Auditor",
+        "company": "Deloitte International",
+        "period": "2019 - Present",
+        "achievements": [
+          "Led 50+ high-stakes financial audits for Fortune 500 companies",
+          "Achieved 100% compliance rate across all regulatory frameworks",
+          "Reduced audit turnaround time by 30% through process optimization"
+        ],
+        "current": true,
+        "icon": "Building2"
+      },
+      {
+        "role": "Junior Accountant",
+        "company": "KPMG Financial Services",
+        "period": "2015 - 2019",
+        "achievements": [
+          "Supported audit teams on 100+ engagements",
+          "Specialized in financial statement preparation and analysis",
+          "Earned CPA certification within first year"
+        ],
+        "current": false,
+        "icon": "Award"
+      },
+      {
+        "role": "Tax Consultant",
+        "company": "PwC Advisory",
+        "period": "2015 - 2019",
+        "achievements": [
+          "Managed tax planning for portfolio exceeding $200M in assets",
+          "Saved clients an average of 18% in annual tax liabilities",
+          "Developed tax strategies for cross-border transactions"
+        ],
+        "current": false,
+        "icon": "TrendingUp"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Trusted by Industry Leaders",
+    "description": "What clients say about working together",
+    "items": [
+      {
+        "name": "Michael Chen",
+        "role": "CFO, TechCorp Industries",
+        "content": "Exceptional expertise in navigating complex tax scenarios. Saved our company significant resources.",
+        "stars": 5
+      },
+      {
+        "name": "Sarah Williams",
+        "role": "CEO, Global Ventures Ltd",
+        "content": "The most thorough financial audit we've experienced. Provided actionable insights that transformed our financial operations.",
+        "stars": 5
+      },
+      {
+        "name": "David Martinez",
+        "role": "Director, Finance Holdings Inc",
+        "content": "Professional, reliable, and incredibly knowledgeable. A trusted partner in our business growth strategy.",
+        "stars": 5
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Discuss Your Financial Needs",
+    "description": "Schedule a consultation to explore how we can optimize your business finances",
+    "labels": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company Name",
+      "service": "Service of Interest",
+      "selection": [
+        "Financial Auditing",
+        "Tax Planning",
+        "Payroll Management",
+        "Business Consulting",
+        "Other Services"
+      ],
+      "message": "Message",
+      "button": "Schedule Consultation"
+    },
+    "placeholder": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "yourmail@example.com",
+      "phone": "+1 (234) 567 8900",
+      "company": "Your Company Inc.",
+      "service": "Select a service",
+      "message": "Tell us about your financial needs and goals..."
+    }
+  },
+  "footer": {
+    "text": "2026 Senior Accountant & Business Administrator. All rights reserved.",
+    "certification": "CPA Certified | Member of AICPA"
+  }
+}

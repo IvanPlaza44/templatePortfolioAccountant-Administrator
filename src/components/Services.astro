@@ -1,0 +1,49 @@
+---
+import { FileCheck, Calculator, Users, TrendingUp } from '@lucide/astro';
+
+const { title, description, items } = Astro.props;
+
+const iconMap = {
+  FileCheck: FileCheck,
+  Calculator: Calculator,
+  Users: Users,
+  TrendingUp: TrendingUp,
+};
+---
+
+<section class="py-24 bg-white">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center mb-16">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+        { title }
+      </h2>
+      <p class="mt-4 text-pretty text-lg text-slate-600">
+        { description }
+      </p>
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {items.map(({ title, description, icon }) => {
+        const IconComponent = iconMap[icon];
+        
+        return (
+          <div class="group p-8 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div class="inline-flex items-center justify-center rounded-lg bg-blue-50 p-3 mb-4 group-hover:bg-[#1e3a8a] transition-colors duration-300">
+              {IconComponent && (
+                <IconComponent class="h-8 w-8 text-[#1e3a8a] group-hover:text-white transition-colors duration-300" />
+              )}
+            </div>
+            
+            <h3 class="text-xl font-semibold text-slate-900 mb-3">
+              {title}
+            </h3>
+            
+            <p class="text-sm leading-relaxed text-slate-600">
+              {description}
+            </p>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

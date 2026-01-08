@@ -1,0 +1,146 @@
+---
+import { Mail, Phone, Send } from '@lucide/astro';
+const { title, description, labels, placeholder } = Astro.props;
+---
+
+<section class="bg-slate-50 py-24">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center mb-12">
+      <h2 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+        {title}
+      </h2>
+      <p class="mt-4 text-pretty text-lg text-slate-600">
+        {description}
+      </p>
+    </div>
+
+    <div class="mx-auto max-w-2xl bg-white p-8 rounded-2xl border border-slate-200 shadow-md">
+      <form class="space-y-6" id="contact-form">
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div class="space-y-2">
+            <label for="firstName" class="text-sm font-medium text-slate-900">{labels.firstName}</label>
+            <input 
+              type="text" 
+              id="firstName" 
+              name="firstName"
+              placeholder={placeholder.firstName} 
+              class="text-slate-900 flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:ring-2 focus:ring-[#1e3a8a] outline-none" 
+              required
+            />
+          </div>
+          <div class="space-y-2">
+            <label for="lastName" class="text-sm font-medium text-slate-900">{labels.lastName}</label>
+            <input 
+              type="text" 
+              id="lastName" 
+              name="lastName"
+              placeholder={placeholder.lastName} 
+              class="text-slate-900 flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:ring-2 focus:ring-[#1e3a8a] outline-none" 
+              required
+            />
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label for="email" class="text-sm font-medium text-slate-900">{labels.email}</label>
+          <div class="relative">
+            <Mail class="absolute left-3 top-2.5 h-5 w-5 text-slate-400" />
+            <input 
+              type="email" 
+              id="email" 
+              name="email"
+              placeholder={placeholder.email} 
+              class="text-slate-900 flex h-10 w-full rounded-md border border-slate-200 bg-white pl-10 pr-3 py-2 text-sm focus:ring-2 focus:ring-[#1e3a8a] outline-none" 
+              required
+            />
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label for="phone" class="text-sm font-medium text-slate-900">{labels.phone}</label>
+          <div class="relative">
+            <Phone class="absolute left-3 top-2.5 h-5 w-5 text-slate-400" />
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone"
+              placeholder={placeholder.phone} 
+              class="text-slate-900 flex h-10 w-full rounded-md border border-slate-200 bg-white pl-10 pr-3 py-2 text-sm focus:ring-2 focus:ring-[#1e3a8a] outline-none" 
+            />
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label for="service" class="text-sm font-medium text-slate-900">{labels.service}</label>
+          <select 
+            id="service" 
+            name="service"
+            class="text-slate-900 flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:ring-2 focus:ring-[#1e3a8a] outline-none"
+          >
+            {labels.selection.map((opt) => (
+              <option value={opt}>{opt}</option>
+            ))}
+          </select>
+        </div>
+
+        <div class="space-y-2">
+          <label for="message" class="text-sm font-medium text-slate-900">{labels.message}</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder={placeholder.message}
+            rows="5"
+            class="text-slate-900 flex min-h-[120px] w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus:ring-2 focus:ring-[#1e3a8a] outline-none resize-none"
+            required
+          ></textarea>
+        </div>
+
+        <button 
+          type="submit" 
+          id="submit-btn"
+          class="inline-flex items-center justify-center w-full bg-[#1e3a8a] hover:bg-[#1e40af] text-white font-medium rounded-md text-base py-4 transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          <Send class="mr-2 h-5 w-5" />
+          <span id="btn-text">{labels.button}</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const btn = document.getElementById('submit-btn') as HTMLButtonElement;
+  const btnTextElem = document.getElementById('btn-text');
+  const originalText = btnTextElem?.innerText || "Schedule Consultation";
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    if (btn) btn.disabled = true;
+    if (btnTextElem) btnTextElem.innerText = "Sending...";
+
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert("¡Mensaje enviado con éxito!");
+        form.reset();
+      } else {
+        alert("Error: " + (result.message || "No se pudo enviar el mensaje"));
+      }
+    } catch (error) {
+      alert("Error de conexión con el servidor");
+    } finally {
+      if (btn) btn.disabled = false;
+      if (btnTextElem) btnTextElem.innerText = originalText;
+    }
+  });
+</script>
